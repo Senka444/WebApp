@@ -1,0 +1,40 @@
+﻿<Page x:Class="WebApp.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WebApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                <Image Height="30" Width="30" Margin="10" Source="/Resources/logo.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                <Label Content="Название компании" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel  Orientation="Horizontal" Grid.Column="1" Grid.Row="0" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image  Height="60" Width="60" Source="/Resources/User.jpg"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Width="150" Height="150" Background="Gray" x:Name="OneButton" Click="OneButton_Click" >
+                <Image Source="/Resources/User.jpg" Width="100"  ></Image>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button  Width="150" Height="150" Background="Gray" x:Name="ManyUser" Click="ManyUser_Click" >
+                <Image Source="/Resources/User2.jpg" Width="100"></Image>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
